@@ -1,5 +1,7 @@
 # Dreamine.IO.Fastech.Ethernet
 
+[Korean documentation](./README_KO.md)
+
 Fastech Ethernet I/O adapter package for the Dreamine IO stack.
 
 This package references only `Dreamine.IO.Abstractions` and .NET networking APIs. It does not redistribute Fastech SDK DLLs, vendor runtime DLLs, or vendor source code.

@@ -1,5 +1,7 @@
 # Dreamine.IO.Fastech.Ethernet
 
+[English documentation](./README.md)
+
 Dreamine IO 스택용 Fastech Ethernet I/O 어댑터 패키지입니다.
 
 이 패키지는 `Dreamine.IO.Abstractions`와 .NET 네트워킹 API만 참조합니다. Fastech SDK DLL, 벤더 런타임 DLL, 벤더 소스 코드는 재배포하지 않습니다.
