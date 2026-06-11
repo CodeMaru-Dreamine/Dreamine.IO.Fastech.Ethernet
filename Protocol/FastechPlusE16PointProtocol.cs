@@ -16,6 +16,8 @@ public sealed class FastechPlusE16PointProtocol : IFastechEthernetIoProtocol
     private const byte SetOutputFrameType = 0xC6;
     private const byte GetSlaveInfoFrameType = 0x01;
     private const uint Digital16PointResetMask = 0xFFFF_FFFF;
+    private const string AnalogInputNotSupportedMessage = "Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog input.";
+    private const string AnalogOutputNotSupportedMessage = "Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog output.";
     private readonly object _syncLock = new();
     private byte _syncNo;
 
@@ -119,31 +121,31 @@ public sealed class FastechPlusE16PointProtocol : IFastechEthernetIoProtocol
     /// <inheritdoc />
     public byte[] BuildReadAnalogInputs(IReadOnlyList<AnalogIoPoint> points)
     {
-        throw new NotSupportedException("Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog input.");
+        throw CreateNotSupportedException(AnalogInputNotSupportedMessage);
     }
 
     /// <inheritdoc />
     public IoResult<double[]> ParseAnalogInputs(IReadOnlyList<byte> responseFrame, int count)
     {
-        return IoResult<double[]>.Failure("Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog input.");
+        return CreateUnsupportedAnalogResult(AnalogInputNotSupportedMessage);
     }
 
     /// <inheritdoc />
     public byte[] BuildReadAnalogOutputs(IReadOnlyList<AnalogIoPoint> points)
     {
-        throw new NotSupportedException("Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog output.");
+        throw CreateNotSupportedException(AnalogOutputNotSupportedMessage);
     }
 
     /// <inheritdoc />
     public IoResult<double[]> ParseAnalogOutputs(IReadOnlyList<byte> responseFrame, int count)
     {
-        return IoResult<double[]>.Failure("Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog output.");
+        return CreateUnsupportedAnalogResult(AnalogOutputNotSupportedMessage);
     }
 
     /// <inheritdoc />
     public byte[] BuildWriteAnalogOutputs(IReadOnlyDictionary<AnalogIoPoint, double> values)
     {
-        throw new NotSupportedException("Fastech Ezi-IO Plus-E 16-point DIO protocol does not support analog output.");
+        throw CreateNotSupportedException(AnalogOutputNotSupportedMessage);
     }
 
     /// <inheritdoc />
@@ -175,6 +177,16 @@ public sealed class FastechPlusE16PointProtocol : IFastechEthernetIoProtocol
         }
 
         return frame;
+    }
+
+    private static NotSupportedException CreateNotSupportedException(string message)
+    {
+        return new NotSupportedException(message);
+    }
+
+    private static IoResult<double[]> CreateUnsupportedAnalogResult(string message)
+    {
+        return IoResult<double[]>.Failure(message);
     }
 
     private IoResult<byte[]> ParseReply(IReadOnlyList<byte> responseFrame, byte expectedFrameType, int minimumPayloadLength)

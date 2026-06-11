@@ -4,11 +4,16 @@ using Dreamine.IO.Abstractions.Results;
 namespace Dreamine.IO.Fastech.Ethernet.Protocol;
 
 /// <summary>
-/// Provides a placeholder protocol implementation until the official Fastech Ethernet I/O frame format is supplied.
+/// Provides an explicit fail-fast protocol for unsupported or not-yet-verified Fastech Ethernet I/O models.
 /// </summary>
+/// <remarks>
+/// The default controller uses <see cref="FastechPlusE16PointProtocol"/> for the real-hardware-verified
+/// Ezi-IO Plus-E 16-point DIO device. Use this implementation only when an application wants a protocol
+/// object that satisfies dependency injection while preventing accidental network frames for an unsupported model.
+/// </remarks>
 public sealed class UnsupportedFastechEthernetIoProtocol : IFastechEthernetIoProtocol
 {
-    private const string Message = "Fastech Ethernet I/O protocol frames are not implemented. Provide an IFastechEthernetIoProtocol implementation based on the official device manual.";
+    private const string Message = "This Fastech Ethernet I/O model is not supported by the selected protocol. Provide an IFastechEthernetIoProtocol implementation verified against the target device manual and hardware.";
 
     /// <inheritdoc />
     public byte[] BuildReadDigitalInputs(IReadOnlyList<IoPoint> points)

@@ -217,9 +217,19 @@ public sealed class FastechEthernetIoController : IIoController
         }
 
         var response = await SendAsync(request, cancellationToken).ConfigureAwait(false);
-        return !response.IsSuccess || response.Value is null
-            ? IoResult<TValue[]>.Failure(response.Message ?? "Failed to receive the Fastech Ethernet I/O response.", response.ErrorCode)
-            : parseResponse(response.Value);
+        if (!response.IsSuccess || response.Value is null)
+        {
+            return IoResult<TValue[]>.Failure(response.Message ?? "Failed to receive the Fastech Ethernet I/O response.", response.ErrorCode);
+        }
+
+        try
+        {
+            return parseResponse(response.Value);
+        }
+        catch (Exception ex)
+        {
+            return IoResult<TValue[]>.Failure(ex.Message);
+        }
     }
 
     private async Task<IoResult> SendWriteAsync<TKey, TValue>(
@@ -247,9 +257,19 @@ public sealed class FastechEthernetIoController : IIoController
         }
 
         var response = await SendAsync(request, cancellationToken).ConfigureAwait(false);
-        return !response.IsSuccess || response.Value is null
-            ? IoResult.Failure(response.Message ?? "Failed to receive the Fastech Ethernet I/O response.", response.ErrorCode)
-            : parseResponse(response.Value);
+        if (!response.IsSuccess || response.Value is null)
+        {
+            return IoResult.Failure(response.Message ?? "Failed to receive the Fastech Ethernet I/O response.", response.ErrorCode);
+        }
+
+        try
+        {
+            return parseResponse(response.Value);
+        }
+        catch (Exception ex)
+        {
+            return IoResult.Failure(ex.Message);
+        }
     }
 
     private async Task<IoResult<byte[]>> SendAsync(byte[] request, CancellationToken cancellationToken)
