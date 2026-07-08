@@ -6,7 +6,7 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>Dreamine.IO.Fastech.Ethernet</PackageId>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<Authors>Dreamine Core Team</Authors>
 		<Company>Dreamine</Company>
 		<Description>Fastech Ethernet I/O adapter for Dreamine IO, including a hardware-verified Ezi-IO Plus-E 16 DI/16 DO UDP protocol.</Description>
