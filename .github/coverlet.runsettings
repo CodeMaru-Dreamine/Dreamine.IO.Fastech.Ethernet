@@ -9,7 +9,8 @@
           <ExcludeByFile>**/tests/**</ExcludeByFile>
           <IncludeTestAssembly>false</IncludeTestAssembly>
           <SingleHit>true</SingleHit>
-          <UseSourceLink>true</UseSourceLink>
+          <!-- SonarQube Cloud maps physical checkout paths to indexed source files. -->
+          <UseSourceLink>false</UseSourceLink>
         </Configuration>
       </DataCollector>
     </DataCollectors>
