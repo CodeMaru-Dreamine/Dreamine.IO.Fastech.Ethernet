@@ -1,6 +1,21 @@
 # Dreamine.IO.Fastech.Ethernet
 
-[English documentation](./README.md)
+[![CI](https://github.com/CodeMaru-Dreamine/Dreamine.IO.Fastech.Ethernet/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CodeMaru-Dreamine/Dreamine.IO.Fastech.Ethernet/actions/workflows/ci.yml)
+[![품질 게이트](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+[![보안 등급](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+[![테스트 커버리지](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=coverage)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+
+[![라이선스](https://img.shields.io/badge/license-MIT-2496ED.svg)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-8-512BD4.svg)](https://dotnet.microsoft.com/download/dotnet/8.0)
+[![NuGet](https://img.shields.io/nuget/v/Dreamine.IO.Fastech.Ethernet.svg)](https://www.nuget.org/packages/Dreamine.IO.Fastech.Ethernet)
+[![누적 다운로드](https://img.shields.io/nuget/dt/Dreamine.IO.Fastech.Ethernet.svg)](https://www.nuget.org/packages/Dreamine.IO.Fastech.Ethernet)
+
+[![문서](https://img.shields.io/badge/%F0%9F%93%98%20문서-dreamine.kr-2496ED)](https://dreamine.kr/libraries?lang=ko)
+[![가이드](https://img.shields.io/badge/%F0%9F%93%98%20가이드-dreamine.kr-2496ED)](https://dreamine.kr/guide?lang=ko)
+[![실습장](https://img.shields.io/badge/%F0%9F%8E%AE%20실습장-dreamine.kr-7B2CBF)](https://dreamine.kr/playground?lang=ko)
+[![도서](https://img.shields.io/badge/%F0%9F%93%96%20도서-실전%20MVVM%20아키텍처-black)](https://bookk.co.kr/bookStore/69c0f1b41461ec1ae849a0f6)
+
+[영문 문서](./README.md)
 
 Dreamine IO 스택용 Fastech Ethernet I/O 어댑터 패키지입니다.
 

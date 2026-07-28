@@ -1,5 +1,20 @@
 # Dreamine.IO.Fastech.Ethernet
 
+[![CI](https://github.com/CodeMaru-Dreamine/Dreamine.IO.Fastech.Ethernet/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/CodeMaru-Dreamine/Dreamine.IO.Fastech.Ethernet/actions/workflows/ci.yml)
+[![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet&metric=coverage)](https://sonarcloud.io/summary/new_code?id=CodeMaru-Dreamine_Dreamine.IO.Fastech.Ethernet)
+
+[![License](https://img.shields.io/badge/license-MIT-2496ED.svg)](LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-8-512BD4.svg)](https://dotnet.microsoft.com/download/dotnet/8.0)
+[![NuGet](https://img.shields.io/nuget/v/Dreamine.IO.Fastech.Ethernet.svg)](https://www.nuget.org/packages/Dreamine.IO.Fastech.Ethernet)
+[![Downloads](https://img.shields.io/nuget/dt/Dreamine.IO.Fastech.Ethernet.svg)](https://www.nuget.org/packages/Dreamine.IO.Fastech.Ethernet)
+
+[![Docs](https://img.shields.io/badge/%F0%9F%93%98%20Docs-dreamine.kr-2496ED)](https://dreamine.kr/libraries?lang=en)
+[![Guide](https://img.shields.io/badge/%F0%9F%93%98%20Guide-dreamine.kr-2496ED)](https://dreamine.kr/guide?lang=en)
+[![Playground](https://img.shields.io/badge/%F0%9F%8E%AE%20Playground-dreamine.kr-7B2CBF)](https://dreamine.kr/playground?lang=en)
+[![Book](https://img.shields.io/badge/%F0%9F%93%96%20Book-Practical%20MVVM%20Architecture-black)](https://bookk.co.kr/bookStore/69c0f1b41461ec1ae849a0f6)
+
 [Korean documentation](./README_KO.md)
 
 Fastech Ethernet I/O adapter package for the Dreamine IO stack.
