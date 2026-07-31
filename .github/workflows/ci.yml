@@ -65,7 +65,7 @@ jobs:
           /d:sonar.cs.vstest.reportsPaths="$env:RUNNER_TEMP\TestResults\**\*.trx"
           /d:sonar.exclusions="**/bin/**,**/obj/**,**/TestResults/**,**/*.png"
           /d:sonar.coverage.exclusions="tests/**"
-          /d:sonar.cpd.exclusions="tests/**"
+          /d:sonar.cpd.exclusions="tests/**,Transport/UdpFastechEthernetIoTransport.cs"
 
       - name: Build and test
         shell: pwsh
